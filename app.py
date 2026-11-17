@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import os
 
-df = pd.read_csv("H:\prova_python09\dados_transporte_bh.csv", sep=";")
+df = pd.read_csv("dados_transporte_bh.csv", sep=";")
 df.columns = df.columns.str.strip()
 df["LINHA"] = df["LINHA"].astype(str).str.strip()
 df = df[~df["PC"].isin([0, 3])]
